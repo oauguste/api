@@ -55,7 +55,8 @@ app.use((req, res, next) => {
 });
 app.use(
   cors({
-    origin: "https://oauguste.github.io",
+    origin:
+      "https://main--superlative-marzipan-490e1d.netlify.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
