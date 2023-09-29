@@ -53,7 +53,13 @@ app.use((req, res, next) => {
   console.log(req.headers);
   next();
 });
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://oauguste.github.io",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 
 app.use("/", indexRouter);
 
